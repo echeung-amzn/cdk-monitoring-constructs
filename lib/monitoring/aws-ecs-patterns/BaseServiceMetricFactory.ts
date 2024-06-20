@@ -48,7 +48,10 @@ export class BaseServiceMetricFactory extends BaseMetricFactory<BaseServiceMetri
       "Cluster CPU Utilization",
       this.dimensionsMap,
       undefined,
-      EcsNamespace
+      EcsNamespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 
@@ -59,7 +62,10 @@ export class BaseServiceMetricFactory extends BaseMetricFactory<BaseServiceMetri
       "Cluster Memory Utilization",
       this.dimensionsMap,
       undefined,
-      EcsNamespace
+      EcsNamespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 
@@ -70,7 +76,10 @@ export class BaseServiceMetricFactory extends BaseMetricFactory<BaseServiceMetri
       "Running Tasks",
       this.dimensionsMap,
       undefined,
-      EcsContainerInsightsNamespace
+      EcsContainerInsightsNamespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 
@@ -81,7 +90,10 @@ export class BaseServiceMetricFactory extends BaseMetricFactory<BaseServiceMetri
       "Ephemeral Storage Reserved",
       this.dimensionsMap,
       undefined,
-      EcsContainerInsightsNamespace
+      EcsContainerInsightsNamespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 
@@ -92,7 +104,10 @@ export class BaseServiceMetricFactory extends BaseMetricFactory<BaseServiceMetri
       "Ephemeral Storage Utilized",
       this.dimensionsMap,
       undefined,
-      EcsContainerInsightsNamespace
+      EcsContainerInsightsNamespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 

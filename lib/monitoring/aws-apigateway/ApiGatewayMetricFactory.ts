@@ -93,7 +93,10 @@ export class ApiGatewayMetricFactory extends BaseMetricFactory<ApiGatewayMetricF
       "Count",
       this.dimensionsMap,
       undefined,
-      ApiGatewayNamespace
+      ApiGatewayNamespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 
@@ -104,7 +107,10 @@ export class ApiGatewayMetricFactory extends BaseMetricFactory<ApiGatewayMetricF
       "4XX Error",
       this.dimensionsMap,
       undefined,
-      ApiGatewayNamespace
+      ApiGatewayNamespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 
@@ -125,7 +131,10 @@ export class ApiGatewayMetricFactory extends BaseMetricFactory<ApiGatewayMetricF
       "5XX Fault",
       this.dimensionsMap,
       undefined,
-      ApiGatewayNamespace
+      ApiGatewayNamespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 
@@ -168,7 +177,10 @@ export class ApiGatewayMetricFactory extends BaseMetricFactory<ApiGatewayMetricF
       label,
       this.dimensionsMap,
       undefined,
-      ApiGatewayNamespace
+      ApiGatewayNamespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 }

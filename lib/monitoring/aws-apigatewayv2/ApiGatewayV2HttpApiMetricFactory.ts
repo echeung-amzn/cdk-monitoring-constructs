@@ -100,7 +100,10 @@ export class ApiGatewayV2HttpApiMetricFactory extends BaseMetricFactory<ApiGatew
       "4xx",
       this.dimensionsMap,
       undefined,
-      ApiGatewayNamespace
+      ApiGatewayNamespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 
@@ -121,7 +124,10 @@ export class ApiGatewayV2HttpApiMetricFactory extends BaseMetricFactory<ApiGatew
       "5xx",
       this.dimensionsMap,
       undefined,
-      ApiGatewayNamespace
+      ApiGatewayNamespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 
@@ -185,7 +191,10 @@ export class ApiGatewayV2HttpApiMetricFactory extends BaseMetricFactory<ApiGatew
       label,
       this.dimensionsMap,
       undefined,
-      ApiGatewayNamespace
+      ApiGatewayNamespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 
@@ -197,7 +206,10 @@ export class ApiGatewayV2HttpApiMetricFactory extends BaseMetricFactory<ApiGatew
       label,
       this.dimensionsMap,
       undefined,
-      ApiGatewayNamespace
+      ApiGatewayNamespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 }

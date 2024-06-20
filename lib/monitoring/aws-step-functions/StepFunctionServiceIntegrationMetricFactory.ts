@@ -42,7 +42,10 @@ export class StepFunctionServiceIntegrationMetricFactory extends BaseMetricFacto
       "P99",
       this.dimensionsMap,
       undefined,
-      Namespace
+      Namespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 
@@ -53,7 +56,10 @@ export class StepFunctionServiceIntegrationMetricFactory extends BaseMetricFacto
       "P90",
       this.dimensionsMap,
       undefined,
-      Namespace
+      Namespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 
@@ -64,7 +70,10 @@ export class StepFunctionServiceIntegrationMetricFactory extends BaseMetricFacto
       "P50",
       this.dimensionsMap,
       undefined,
-      Namespace
+      Namespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 
@@ -75,7 +84,10 @@ export class StepFunctionServiceIntegrationMetricFactory extends BaseMetricFacto
       "P99",
       this.dimensionsMap,
       undefined,
-      Namespace
+      Namespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 
@@ -86,7 +98,10 @@ export class StepFunctionServiceIntegrationMetricFactory extends BaseMetricFacto
       "P90",
       this.dimensionsMap,
       undefined,
-      Namespace
+      Namespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 
@@ -97,7 +112,10 @@ export class StepFunctionServiceIntegrationMetricFactory extends BaseMetricFacto
       "P50",
       this.dimensionsMap,
       undefined,
-      Namespace
+      Namespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 
@@ -108,7 +126,10 @@ export class StepFunctionServiceIntegrationMetricFactory extends BaseMetricFacto
       "P99",
       this.dimensionsMap,
       undefined,
-      Namespace
+      Namespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 
@@ -119,7 +140,10 @@ export class StepFunctionServiceIntegrationMetricFactory extends BaseMetricFacto
       "P90",
       this.dimensionsMap,
       undefined,
-      Namespace
+      Namespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 
@@ -130,7 +154,10 @@ export class StepFunctionServiceIntegrationMetricFactory extends BaseMetricFacto
       "P50",
       this.dimensionsMap,
       undefined,
-      Namespace
+      Namespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 
@@ -162,7 +189,10 @@ export class StepFunctionServiceIntegrationMetricFactory extends BaseMetricFacto
       "Scheduled",
       this.dimensionsMap,
       undefined,
-      Namespace
+      Namespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 
@@ -173,7 +203,10 @@ export class StepFunctionServiceIntegrationMetricFactory extends BaseMetricFacto
       "Started",
       this.dimensionsMap,
       undefined,
-      Namespace
+      Namespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 
@@ -184,7 +217,10 @@ export class StepFunctionServiceIntegrationMetricFactory extends BaseMetricFacto
       "Succeeded",
       this.dimensionsMap,
       undefined,
-      Namespace
+      Namespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 
@@ -195,7 +231,10 @@ export class StepFunctionServiceIntegrationMetricFactory extends BaseMetricFacto
       "Timeout",
       this.dimensionsMap,
       undefined,
-      Namespace
+      Namespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 }

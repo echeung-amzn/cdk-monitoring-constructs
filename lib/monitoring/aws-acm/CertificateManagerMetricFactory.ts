@@ -37,7 +37,10 @@ export class CertificateManagerMetricFactory extends BaseMetricFactory<Certifica
       "Days to expiry",
       this.dimensionsMap,
       undefined,
-      Namespace
+      Namespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 }

@@ -38,7 +38,10 @@ export class KinesisFirehoseMetricFactory extends BaseMetricFactory<KinesisFireh
       "Succeed",
       this.dimensionsMap,
       undefined,
-      FirehoseNamespace
+      FirehoseNamespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 
@@ -49,7 +52,10 @@ export class KinesisFirehoseMetricFactory extends BaseMetricFactory<KinesisFireh
       "Failed",
       this.dimensionsMap,
       undefined,
-      FirehoseNamespace
+      FirehoseNamespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 
@@ -60,7 +66,10 @@ export class KinesisFirehoseMetricFactory extends BaseMetricFactory<KinesisFireh
       "Incoming (bytes)",
       this.dimensionsMap,
       undefined,
-      FirehoseNamespace
+      FirehoseNamespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 
@@ -71,7 +80,10 @@ export class KinesisFirehoseMetricFactory extends BaseMetricFactory<KinesisFireh
       "Incoming (PutRequest)",
       this.dimensionsMap,
       undefined,
-      FirehoseNamespace
+      FirehoseNamespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 
@@ -82,7 +94,10 @@ export class KinesisFirehoseMetricFactory extends BaseMetricFactory<KinesisFireh
       "Incoming (Records)",
       this.dimensionsMap,
       undefined,
-      FirehoseNamespace
+      FirehoseNamespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 
@@ -93,7 +108,10 @@ export class KinesisFirehoseMetricFactory extends BaseMetricFactory<KinesisFireh
       "Throttled",
       this.dimensionsMap,
       undefined,
-      FirehoseNamespace
+      FirehoseNamespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 
@@ -104,7 +122,10 @@ export class KinesisFirehoseMetricFactory extends BaseMetricFactory<KinesisFireh
       "PutRecord P90",
       this.dimensionsMap,
       undefined,
-      FirehoseNamespace
+      FirehoseNamespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 
@@ -115,7 +136,10 @@ export class KinesisFirehoseMetricFactory extends BaseMetricFactory<KinesisFireh
       "PutRecordBatch P90",
       this.dimensionsMap,
       undefined,
-      FirehoseNamespace
+      FirehoseNamespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 
@@ -159,7 +183,10 @@ export class KinesisFirehoseMetricFactory extends BaseMetricFactory<KinesisFireh
       "Incoming Bytes/s Limit",
       this.dimensionsMap,
       undefined,
-      FirehoseNamespace
+      FirehoseNamespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 
@@ -170,7 +197,10 @@ export class KinesisFirehoseMetricFactory extends BaseMetricFactory<KinesisFireh
       "Records/s Limit",
       this.dimensionsMap,
       undefined,
-      FirehoseNamespace
+      FirehoseNamespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 
@@ -181,7 +211,10 @@ export class KinesisFirehoseMetricFactory extends BaseMetricFactory<KinesisFireh
       "PutRequests/s Limit",
       this.dimensionsMap,
       undefined,
-      FirehoseNamespace
+      FirehoseNamespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 }

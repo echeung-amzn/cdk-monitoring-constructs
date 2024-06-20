@@ -63,7 +63,8 @@ export class SecretsManagerMonitoring extends Monitoring {
     this.secretsCountAnnotation = [];
 
     const metricFactory = new SecretsManagerMetricFactory(
-      scope.createMetricFactory()
+      scope.createMetricFactory(),
+      props
     );
     this.secretsCountMetric = metricFactory.metricSecretCount();
 

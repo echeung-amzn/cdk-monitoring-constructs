@@ -40,7 +40,10 @@ export class DynamoTableGlobalSecondaryIndexMetricFactory extends BaseMetricFact
       "Provisioned",
       this.dimensionsMap,
       undefined,
-      DynamoDbNamespace
+      DynamoDbNamespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 
@@ -51,7 +54,10 @@ export class DynamoTableGlobalSecondaryIndexMetricFactory extends BaseMetricFact
       "Provisioned",
       this.dimensionsMap,
       undefined,
-      DynamoDbNamespace
+      DynamoDbNamespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 
@@ -88,7 +94,10 @@ export class DynamoTableGlobalSecondaryIndexMetricFactory extends BaseMetricFact
       "Consumed by index",
       this.dimensionsMap,
       undefined,
-      DynamoDbNamespace
+      DynamoDbNamespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 
@@ -99,7 +108,10 @@ export class DynamoTableGlobalSecondaryIndexMetricFactory extends BaseMetricFact
       undefined,
       this.dimensionsMap,
       undefined,
-      DynamoDbNamespace
+      DynamoDbNamespace,
+      undefined,
+      this.region,
+      this.account
     );
 
     return this.metricFactory.createMetricMath(
@@ -116,7 +128,10 @@ export class DynamoTableGlobalSecondaryIndexMetricFactory extends BaseMetricFact
       undefined,
       this.dimensionsMap,
       undefined,
-      DynamoDbNamespace
+      DynamoDbNamespace,
+      undefined,
+      this.region,
+      this.account
     );
 
     return this.metricFactory.createMetricMath(
@@ -133,7 +148,10 @@ export class DynamoTableGlobalSecondaryIndexMetricFactory extends BaseMetricFact
       undefined,
       this.dimensionsMap,
       undefined,
-      DynamoDbNamespace
+      DynamoDbNamespace,
+      undefined,
+      this.region,
+      this.account
     );
 
     return this.metricFactory.createMetricMath(

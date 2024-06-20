@@ -43,7 +43,10 @@ export class StepFunctionActivityMetricFactory extends BaseMetricFactory<StepFun
       "P99",
       this.dimensionsMap,
       undefined,
-      Namespace
+      Namespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 
@@ -54,7 +57,10 @@ export class StepFunctionActivityMetricFactory extends BaseMetricFactory<StepFun
       "P90",
       this.dimensionsMap,
       undefined,
-      Namespace
+      Namespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 
@@ -65,7 +71,10 @@ export class StepFunctionActivityMetricFactory extends BaseMetricFactory<StepFun
       "P50",
       this.dimensionsMap,
       undefined,
-      Namespace
+      Namespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 
@@ -76,7 +85,10 @@ export class StepFunctionActivityMetricFactory extends BaseMetricFactory<StepFun
       "P99",
       this.dimensionsMap,
       undefined,
-      Namespace
+      Namespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 
@@ -87,7 +99,10 @@ export class StepFunctionActivityMetricFactory extends BaseMetricFactory<StepFun
       "P90",
       this.dimensionsMap,
       undefined,
-      Namespace
+      Namespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 
@@ -98,7 +113,10 @@ export class StepFunctionActivityMetricFactory extends BaseMetricFactory<StepFun
       "P50",
       this.dimensionsMap,
       undefined,
-      Namespace
+      Namespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 
@@ -109,7 +127,10 @@ export class StepFunctionActivityMetricFactory extends BaseMetricFactory<StepFun
       "P99",
       this.dimensionsMap,
       undefined,
-      Namespace
+      Namespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 
@@ -120,7 +141,10 @@ export class StepFunctionActivityMetricFactory extends BaseMetricFactory<StepFun
       "P90",
       this.dimensionsMap,
       undefined,
-      Namespace
+      Namespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 
@@ -131,7 +155,10 @@ export class StepFunctionActivityMetricFactory extends BaseMetricFactory<StepFun
       "P50",
       this.dimensionsMap,
       undefined,
-      Namespace
+      Namespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 
@@ -142,7 +169,10 @@ export class StepFunctionActivityMetricFactory extends BaseMetricFactory<StepFun
       "Failed",
       this.dimensionsMap,
       undefined,
-      Namespace
+      Namespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 
@@ -163,7 +193,10 @@ export class StepFunctionActivityMetricFactory extends BaseMetricFactory<StepFun
       "HeartbeatTimedOut",
       this.dimensionsMap,
       undefined,
-      Namespace
+      Namespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 
@@ -174,7 +207,10 @@ export class StepFunctionActivityMetricFactory extends BaseMetricFactory<StepFun
       "Scheduled",
       this.dimensionsMap,
       undefined,
-      Namespace
+      Namespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 
@@ -185,7 +221,10 @@ export class StepFunctionActivityMetricFactory extends BaseMetricFactory<StepFun
       "Started",
       this.dimensionsMap,
       undefined,
-      Namespace
+      Namespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 
@@ -196,7 +235,10 @@ export class StepFunctionActivityMetricFactory extends BaseMetricFactory<StepFun
       "Succeeded",
       this.dimensionsMap,
       undefined,
-      Namespace
+      Namespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 
@@ -207,7 +249,10 @@ export class StepFunctionActivityMetricFactory extends BaseMetricFactory<StepFun
       "Timeout",
       this.dimensionsMap,
       undefined,
-      Namespace
+      Namespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 }

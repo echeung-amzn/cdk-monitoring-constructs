@@ -234,7 +234,11 @@ export class LambdaFunctionMonitoring extends Monitoring {
     if (props.lambdaInsightsEnabled) {
       this.enhancedMetricFactory = new LambdaFunctionEnhancedMetricFactory(
         scope.createMetricFactory(),
-        props.lambdaFunction
+        props.lambdaFunction,
+        {
+          region: props.region,
+          account: props.account,
+        }
       );
       this.enhancedMonitoringMaxCpuTotalTimeMetric =
         this.enhancedMetricFactory.enhancedMetricMaxCpuTotalTime();

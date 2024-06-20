@@ -132,7 +132,10 @@ export class RedshiftClusterMetricFactory extends BaseMetricFactory<RedshiftClus
       latency,
       dimensions,
       undefined,
-      RedshiftNamespace
+      RedshiftNamespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 
@@ -147,7 +150,10 @@ export class RedshiftClusterMetricFactory extends BaseMetricFactory<RedshiftClus
       label,
       this.dimensionsMap,
       undefined,
-      RedshiftNamespace
+      RedshiftNamespace,
+      undefined,
+      this.region,
+      this.account
     );
   }
 }

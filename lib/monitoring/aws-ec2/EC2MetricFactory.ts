@@ -14,7 +14,9 @@ export interface IEC2MetricFactoryStrategy {
   createMetrics(
     metricFactory: MetricFactory,
     metricName: string,
-    statistic: MetricStatistic
+    statistic: MetricStatistic,
+    region?: string,
+    account?: string
   ): IMetric[];
 }
 
@@ -31,7 +33,9 @@ class AutoScalingGroupStrategy implements IEC2MetricFactoryStrategy {
   createMetrics(
     metricFactory: MetricFactory,
     metricName: string,
-    statistic: MetricStatistic
+    statistic: MetricStatistic,
+    region?: string,
+    account?: string
   ) {
     return [
       metricFactory.createMetric(
@@ -40,7 +44,10 @@ class AutoScalingGroupStrategy implements IEC2MetricFactoryStrategy {
         undefined,
         resolveDimensions(this.autoScalingGroup, undefined),
         undefined,
-        EC2Namespace
+        EC2Namespace,
+        undefined,
+        region,
+        account
       ),
     ];
   }
@@ -61,7 +68,9 @@ class SelectedInstancesStrategy implements IEC2MetricFactoryStrategy {
   createMetrics(
     metricFactory: MetricFactory,
     metricName: string,
-    statistic: MetricStatistic
+    statistic: MetricStatistic,
+    region?: string,
+    account?: string
   ) {
     return this.instanceIds.map((instanceId) => {
       return metricFactory.createMetric(
@@ -70,7 +79,10 @@ class SelectedInstancesStrategy implements IEC2MetricFactoryStrategy {
         `${metricName} (${instanceId})`,
         resolveDimensions(this.autoScalingGroup, instanceId),
         undefined,
-        EC2Namespace
+        EC2Namespace,
+        undefined,
+        region,
+        account
       );
     });
   }
@@ -83,14 +95,20 @@ class AllInstancesStrategy implements IEC2MetricFactoryStrategy {
   createMetrics(
     metricFactory: MetricFactory,
     metricName: string,
-    statistic: MetricStatistic
+    statistic: MetricStatistic,
+    region?: string,
+    account?: string
   ) {
     return [
       metricFactory.createMetricSearch(
         `MetricName="${metricName}"`,
         { InstanceId: undefined as unknown as string },
         statistic,
-        EC2Namespace
+        EC2Namespace,
+        undefined,
+        undefined,
+        region,
+        account
       ),
     ];
   }
@@ -157,7 +175,7 @@ export class EC2MetricFactory extends BaseMetricFactory<EC2MetricFactoryProps> {
    * CloudWatch when the instance is not allocated a full processor core.
    */
   metricAverageCpuUtilisationPercent() {
-    return this.createMetrics("CPUUtilization", MetricStatistic.AVERAGE);
+    return this.metric("CPUUtilization", MetricStatistic.AVERAGE);
   }
 
   /**
@@ -197,7 +215,7 @@ export class EC2MetricFactory extends BaseMetricFactory<EC2MetricFactoryProps> {
    * This metric identifies the volume of incoming network traffic to a single instance.
    */
   metricAverageNetworkInRateBytes() {
-    return this.createMetrics("NetworkIn", MetricStatistic.AVERAGE);
+    return this.metric("NetworkIn", MetricStatistic.AVERAGE);
   }
 
   /**
@@ -205,7 +223,7 @@ export class EC2MetricFactory extends BaseMetricFactory<EC2MetricFactoryProps> {
    * This metric identifies the volume of outgoing network traffic from a single instance.
    */
   metricAverageNetworkOutRateBytes() {
-    return this.createMetrics("NetworkOut", MetricStatistic.AVERAGE);
+    return this.metric("NetworkOut", MetricStatistic.AVERAGE);
   }
 
   private createDiskMetrics(metricName: string, statistic: MetricStatistic) {
@@ -235,7 +253,7 @@ export class EC2MetricFactory extends BaseMetricFactory<EC2MetricFactoryProps> {
     });
   }
 
-  private createMetrics(metricName: string, statistic: MetricStatistic) {
+  private metric(metricName: string, statistic: MetricStatistic) {
     return this.strategy.createMetrics(
       this.metricFactory,
       metricName,
